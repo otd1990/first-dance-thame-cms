@@ -481,11 +481,11 @@ img {
 .header__logo {
   margin-right: auto;
 }
-@media only screen and (max-width: 47.99em) {
+/* @media only screen and (max-width: 47.99em) {
   .header__logo {
     margin-left: auto;
   }
-}
+} */
 .header__logo--img {
   height: 6rem;
   width: auto;
