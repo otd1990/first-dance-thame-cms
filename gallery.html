@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>First Dance Thame Gallery</title>
+    <meta
+      name="Description"
+      content="I am lucky enough to be able to hold classes in a lovely bright and spacious hall in the heart of Long Crendon village"
+    />
+    <meta
+      name="Keywords"
+      content="first dance thame gallery, first dance crendon gallery, first dance Oxfordshire gallery"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="First Dance Thame" />
+    <meta
+      property="og:description"
+      content="Ballet classes for children of all ages in Oxfordshire and Buckinghamshire"
+    />
+    <meta property="og:url" content="https://www.firstdanceclasses.co.uk/gallery" />
+    <meta property="og:site_name" content="First Dance Thame" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:url" content="https://www.firstdanceclasses.co.uk/gallery" />
+    <meta property="og:image" content="https://www.firstdanceclasses.co.uk/images/logo-main.jpg" />
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="images/favicon/android-icon-192x192.png"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png" />
+    <!-- <link rel="manifest" href="images/favicon/manifest.json"> -->
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- BOOTSTRAP -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gayathri:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/be99808d02.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.compiled.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- <link rel="shortcut icon" type="image/png" href="img/favicon.png"> -->
+  </head>
+
+  <body>
+    <header class="header"></header>
+    <main>
+      <section class="pageAbout">
+        <div class="box__grey">
+          <div class="container">
+            <h1 class="box__grey--title">Gallery</h1>
+          </div>
+        </div>
+      </section>
+      <section id="gallery">
+        <div class="position-relative">
+          <article id="gallery-container" class="row no-gutters"></article>
+          <!-- <div id="loading" class="gallery__loading">
+            <img src="images/loading.gif" alt="loading" class="gallery__loading--gif d-block" />
+            <small>Loading...</small>
+          </div> -->
+          <section id="gallerySection" class="gallery__headings"></section>
+          <section id="galleryImageWrapper" class="gallery__content"></section>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"></footer>
+
+    <script src="js/scripts.js"></script>
+    <script src="js/gallery.js"></script>
+    <!-- <script>
+      const currYear = new Date().getFullYear()
+
+      document.getElementById('currYear').innerHTML = currYear
+
+      ;(function () {
+        let cont = ''
+        let content = []
+
+        const showImgs = () => {
+          const items = document.querySelectorAll('.gallery__item')
+          setTimeout(function () {
+            // console.log("showing now");
+            // items.forEach((i, c) => {
+            //   i.classList.add('showing');
+            // });
+            document.getElementById('loading').classList.add('hide')
+          }, 1000)
+        }
+
+        const returnedImages = async () => {
+          fetch('https://res.cloudinary.com/first-dance/image/list/show.json')
+            .then((res) => res.json())
+            .then((json) => {
+              json.resources.map((resource) => {
+                console.log(resource)
+                content = [...content, resource]
+              })
+              fetch('https://res.cloudinary.com/first-dance/video/list/show.json')
+                .then((res) => res.json())
+                .then((json) => {
+                  json.resources.map((resource) => {
+                    console.log(resource)
+                    content = [...content, resource]
+                  })
+                })
+                .then(() => {
+                  content.map(({public_id, format, version}) => {
+                    const t = public_id.substring(0, 3)
+                    console.log(' format ', format, format != 'jpg')
+                    cont += '<div class="col-12 col-md-6 col-lg-4 my-3"><div class="gallery__wrap">'
+                    if (format == 'jpg') {
+                      cont +=
+                        '<img class="gallery__img gallery__item" src="https://res.cloudinary.com/first-dance/image/upload/v' +
+                        version +
+                        '/' +
+                        public_id +
+                        '.' +
+                        format +
+                        '" alt="' +
+                        public_id +
+                        '" />'
+                    } else {
+                      cont +=
+                        '<iframe id="hero-video" class="embed-responsive-item gallery__video gallery__item" src="https://res.cloudinary.com/first-dance/video/upload/v' +
+                        version +
+                        '/' +
+                        public_id +
+                        '.' +
+                        format +
+                        '" allow="fullscreen" ></iframe>'
+                    }
+                    cont += '</div></div>'
+                  })
+                  document.getElementById('gallery-container').innerHTML = cont
+                })
+                .then(() => {
+                  showImgs()
+                })
+            })
+        }
+
+        returnedImages()
+      })()
+    </script> -->
+  </body>
+</html>
