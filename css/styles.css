@@ -400,7 +400,7 @@ img {
   .header__nav {
     position: fixed;
     right: 0;
-    top: 8.25rem;
+    top: 60px;
     background-color: #333;
     height: 100%;
     min-width: 250px;
