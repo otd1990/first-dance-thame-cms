@@ -412,7 +412,7 @@ img {
 }
 .header__nav--item {
   font-size: 1.8rem;
-  margin-right: 3rem;
+  margin-right: 2.5rem;
   color: #000000;
   font-family: "Roboto", sans-serif;
   position: relative;
@@ -491,7 +491,7 @@ img {
 } */
 .header__logo--img {
   height: 6rem;
-  width: fit-content;
+  width: 23.75rem;
   box-shadow: none;
 }
 .navigation__button {
