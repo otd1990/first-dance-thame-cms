@@ -131,7 +131,7 @@ function fetchContent() {
       buildAbout(response.result);
     })
     .catch((error) => {
-      console.log("THIS WEAS AN ERROR ", error);
+      console.error("THIS WEAS AN ERROR fetching content ");
     });
 }
 // })()

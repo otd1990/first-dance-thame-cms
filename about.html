@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -17,29 +17,89 @@
       property="og:description"
       content="Ballet classes for children of all ages in Oxfordshire and Buckinghamshire"
     />
-    <meta property="og:url" content="https://www.firstdanceclasses.co.uk/about" />
+    <meta
+      property="og:url"
+      content="https://www.firstdanceclasses.co.uk/about"
+    />
     <meta property="og:site_name" content="First Dance Thame" />
     <meta property="og:locale" content="en_GB" />
-    <meta property="og:url" content="https://www.firstdanceclasses.co.uk/about" />
-    <meta property="og:image" content="https://www.firstdanceclasses.co.uk/images/logo-main.jpg" />
-    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png" />
-    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png" />
-    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png" />
-    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png" />
+    <meta
+      property="og:url"
+      content="https://www.firstdanceclasses.co.uk/about"
+    />
+    <meta
+      property="og:image"
+      content="https://www.firstdanceclasses.co.uk/images/logo-main.jpg"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="images/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="images/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="images/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="images/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="images/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="images/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="images/favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="images/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon/apple-icon-180x180.png"
+    />
     <link
       rel="icon"
       type="image/png"
       sizes="192x192"
       href="images/favicon/android-icon-192x192.png"
     />
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="images/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon/favicon-16x16.png"
+    />
     <link rel="manifest" href="images/favicon/manifest.json" />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
@@ -58,7 +118,10 @@
       href="https://fonts.googleapis.com/css2?family=Gayathri:wght@400;700&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <script src="https://kit.fontawesome.com/be99808d02.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/be99808d02.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
   </head>
@@ -108,36 +171,36 @@
 
     <script src="js/scripts.js"></script>
     <script>
-      fetchContent()
+      fetchContent();
 
       function fetchContent() {
-        let PROJECT_ID = 'c7jd3ho8'
-        let DATASET = 'production'
-        let QUERY = encodeURIComponent('*[_type == "about"]')
+        let PROJECT_ID = "c7jd3ho8";
+        let DATASET = "production";
+        let QUERY = encodeURIComponent('*[_type == "about"]');
 
         // Compose the URL for your project's endpoint and add the query
-        let URL = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${QUERY}`
+        let URL = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${QUERY}`;
 
         fetch(URL)
           .then((res) => res.json())
           .then((response) => {
-            const parent = document.getElementById('aboutMeContent')
+            const parent = document.getElementById("aboutMeContent");
 
             parent.insertAdjacentHTML(
-              'beforeend',
+              "beforeend",
               response.result.map((aboutMeContent) => {
                 return `
         <p class="about__me--text">${aboutMeContent.paragrapOne}</p>
         <p class="about__me--text">${aboutMeContent.paragrapTwo}</p>
         <p class="about__me--text">${aboutMeContent.paragrapThree}</p>
         <p class="about__me--text">${aboutMeContent.paragrapFour}</p>
-    `
-              }),
-            )
+    `;
+              })
+            );
           })
           .catch((error) => {
-            console.log('THIS WEAS AN ERROR ', error)
-          })
+            console.error("THIS WEAS AN ERROR fetching content ");
+          });
       }
     </script>
   </body>

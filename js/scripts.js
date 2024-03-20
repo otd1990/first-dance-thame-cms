@@ -102,7 +102,6 @@ function buildFooter() {
 }
 
 function fetchContent() {
-  console.log("FETCHING CONTENT");
   let PROJECT_ID = "c7jd3ho8";
   let DATASET = "production";
   let QUERY = encodeURIComponent('*[_type == "about"]');
@@ -112,8 +111,6 @@ function fetchContent() {
 
   fetch(URL)
     .then((res) => res.json())
-    .then((respone) => {
-      console.log("fetch response ", respone);
-    });
+    .then((respone) => {});
 }
 // })()
