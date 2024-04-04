@@ -997,3 +997,13 @@ img {
     max-width: 1200px;
   }
 }
+
+@media (max-width: 375px) {
+  .gallery-image__img {
+    position: initial;
+  }
+
+  .gallery__image-wrapper {
+    padding: 0 4.4rem;
+  }
+}
