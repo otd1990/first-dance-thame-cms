@@ -31,14 +31,19 @@ function buildGalleryHeadings(headings) {
   let headingContent = headings
     .map((heading, i) => {
       return `
-      <button onClick="changeSelected('${heading.replace(
+      <button onClick="changeSelected('${heading.replaceAll(
         " ",
         "-"
       )}')" class="gallery-heading__container">
         ${i !== 0 ? '<div class="gallery__heading--separator">|</div>' : ""}
-        <div id="${heading.replace(" ", "-")}" class="gallery-heading ${
-        i === 0 ? "active" : ""
-      } gallery-heading-${heading.replace(" ", "-")} ">${heading}</div>
+        <div 
+          id="${heading.replaceAll(" ", "-")}" 
+          class="gallery-heading ${
+            i === 0 ? "active" : ""
+          } gallery-heading-${heading.replaceAll(" ", "-")}"
+        >
+          ${heading}
+        </div>
       </button>
     `;
     })
@@ -52,7 +57,7 @@ function buildGalleryContent(images) {
   let galleryContent = images
     .map((image, i) => {
       const { galleryName, images } = image;
-      return `<div id="${galleryName.replace(
+      return `<div id="${galleryName.replaceAll(
         " ",
         "-"
       )}--container" class="gallery__image-container ${
@@ -74,11 +79,10 @@ function buildGalleryContent(images) {
 }
 
 function changeSelected(selectedHeading) {
+  console.log("SElected headingt", selectedHeading.trim());
   const currentGrid = document.querySelector(".container-active");
   const currentHeading = document.querySelector(".gallery-heading.active");
-  const newHeading = document.querySelector(
-    `.gallery-heading-${selectedHeading}`
-  );
+  const newHeading = document.getElementById(selectedHeading.trim());
   const newGrid = document.getElementById(`${selectedHeading}--container`);
 
   currentGrid.classList.remove("container-active");
@@ -89,3 +93,5 @@ function changeSelected(selectedHeading) {
 }
 
 fetchGallery();
+
+//gallery-heading-I.S.T.D-Examinations
