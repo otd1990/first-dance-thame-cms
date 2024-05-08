@@ -151,14 +151,18 @@
               <div class="about__me__images">
                 <div class="image--1">
                   <img
-                    src="https://cdn.sanity.io/images/c7jd3ho8/production/945e93bcbd107f11c6169cf92c437deaf1d6d516-264x380.jpg"
+                    id="profileImage"
+                    src=""
                     alt="First Dance About Me"
+                    style="opacity: 0"
                   />
                 </div>
                 <div class="image--2">
                   <img
-                    src="https://cdn.sanity.io/images/c7jd3ho8/production/4ba7b6b7180938331022a9747924c14c0dd7e48c-550x200.jpg"
+                    id="accreditationImage"
+                    src=""
                     alt="First Dance I.S.T.D (Imperial Society Teachers of Dance) Logo"
+                    style="opacity: 0"
                   />
                 </div>
               </div>
@@ -170,38 +174,6 @@
     <footer class="footer"></footer>
 
     <script src="js/scripts.js"></script>
-    <script>
-      fetchContent();
-
-      function fetchContent() {
-        let PROJECT_ID = "c7jd3ho8";
-        let DATASET = "production";
-        let QUERY = encodeURIComponent('*[_type == "about"]');
-
-        // Compose the URL for your project's endpoint and add the query
-        let URL = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${QUERY}`;
-
-        fetch(URL)
-          .then((res) => res.json())
-          .then((response) => {
-            const parent = document.getElementById("aboutMeContent");
-
-            parent.insertAdjacentHTML(
-              "beforeend",
-              response.result.map((aboutMeContent) => {
-                return `
-        <p class="about__me--text">${aboutMeContent.paragrapOne}</p>
-        <p class="about__me--text">${aboutMeContent.paragrapTwo}</p>
-        <p class="about__me--text">${aboutMeContent.paragrapThree}</p>
-        <p class="about__me--text">${aboutMeContent.paragrapFour}</p>
-    `;
-              })
-            );
-          })
-          .catch((error) => {
-            console.error("THIS WEAS AN ERROR fetching content ");
-          });
-      }
-    </script>
+    <script src="js/about.js"></script>
   </body>
 </html>
