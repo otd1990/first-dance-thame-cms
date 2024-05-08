@@ -998,6 +998,12 @@ img {
   }
 }
 
+@media (min-width: 1500px) {
+  .container {
+    max-width: 1500px;
+  }
+}
+
 @media (max-width: 375px) {
   .gallery-image__img {
     position: initial;

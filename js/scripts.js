@@ -29,6 +29,8 @@ function buildHeader() {
   header += '<nav class="header__nav">';
   header += '<div class="header__right">';
   header += '<a href="about" class="header__nav--item">About</a>';
+  header +=
+    '<a href="boys-ballet-club" class="header__nav--item">Boys Ballet</a>';
   header += '<a href="classes" class="header__nav--item">Classes</a>';
   header += '<a href="gallery" class="header__nav--item">Gallery</a>';
   header += '<a href="timetable" class="header__nav--item">Timetable</a>';
