@@ -694,13 +694,13 @@ img {
   }
 }
 .about__me__images .image--1 img {
-  display: inline-block;
+  display: block;
   height: 100%;
-  width: 75%;
+  margin: 0 auto;
 }
 @media only screen and (max-width: 47.99em) {
   .about__me__images .image--1 img {
-    width: 100%;
+    width: 70%;
   }
 }
 .about__me__images .image--2 {
@@ -722,7 +722,6 @@ img {
 }
 .about__me__images .image--2 img {
   height: 100%;
-  width: 75%;
 }
 @media only screen and (max-width: 47.99em) {
   .about__me__images .image--2 img {
@@ -816,7 +815,8 @@ img {
   background-color: #fed2c5;
   padding: 5rem 2rem 3rem;
 }
-.footer .anchor .fas {
+.footer .anchor .fas,
+.footer .anchor .fa {
   align-self: center;
 }
 .footer__copy {
@@ -852,7 +852,8 @@ img {
   margin-bottom: 1rem;
   align-items: center;
 }
-.footer__intouch--item .fas {
+.footer__intouch--item .fas,
+.footer__intouch--item .fa {
   margin-right: 2rem;
   font-size: 2rem;
   color: #333;

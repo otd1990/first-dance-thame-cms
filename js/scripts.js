@@ -92,6 +92,13 @@ function buildFooter() {
     '<a class="header__social--link" href="mailto:firstdancethame@gmail.com">firstdancethame@gmail.com</a>';
   footer += "</div>";
   footer += "</div>";
+  footer += '<div class="footer__intouch--item anchor">';
+  footer += '<i class="fa fa-address-book-o" aria-hidden="true"></i>';
+  footer += '<div class="footer__intouch--main">';
+  footer +=
+    '<a class="header__social--link" href="https://dancestudio-pro.com/online/firstdance" target="_blank" rel="noreferrer noopener">Parent Portal</a>';
+  footer += "</div>";
+  footer += "</div>";
   footer += "</div>";
   footer += "</div>";
   footer += '<div class="footer__copy">';
